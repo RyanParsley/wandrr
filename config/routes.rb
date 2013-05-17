@@ -1,5 +1,10 @@
 Wandrr::Application.routes.draw do
-  resources :trips
+  resources :destinations
+
+
+  resources :trips do
+    resources :destination
+  end
 
   root to: 'trips#index'
 
